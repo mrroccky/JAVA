@@ -1,0 +1,24 @@
+/*Write a program to call parameterized constructor of super class. */
+class  SuperClassConstrcutor
+{
+	SuperClassConstrcutor(int a)
+	{
+		System.out.print("Now you are in super class constructor");
+		System.out.println("And value of a is="+a);
+	}
+	
+}
+class  SubClassConstrcutor extends SuperClassConstrcutor
+{
+	SubClassConstrcutor(int a,int b)
+	{
+		super(a);
+		System.out.print("Now you are in sub class constructor");
+		System.out.println("And value of b is="+b);
+		 
+	}
+	public static void main(String args[])
+	{
+		SubClassConstrcutor s1=new SubClassConstrcutor(5,3);
+	}
+}

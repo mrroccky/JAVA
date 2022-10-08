@@ -1,0 +1,12 @@
+/* Write a program to create Frame without extending(Inheriting) Frame class.*/
+import java.awt.*;
+class FrameClassDemo3
+{
+	public static void main(String args[]) 
+	{
+		Frame Fraem1=new Frame();
+		Fraem1.setTitle("Frame is created without extending Frame class");
+		Fraem1.setSize(500,500);
+		Fraem1.setVisible(true);
+	}
+}

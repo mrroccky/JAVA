@@ -1,0 +1,28 @@
+/*
+   Write a program to demonstrate addItemItem method of Choice class.
+               OR
+   Write a program to addItem items into Choice using addItemItem method of Choice class.
+*/
+import java.applet.*;
+import java.awt.*;
+public class AddItemItemMethodOfChoiceClass extends Applet
+{
+	Choice Choice1;
+	public void init()
+	{
+		Choice1=new Choice();
+		Choice1.addItem("C lang");
+		Choice1.addItem("C++");
+		Choice1.addItem("Java");
+		Choice1.addItem("Scala");
+		Choice1.addItem(".Net");
+		Choice1.addItem("Python");
+		Choice1.addItem("PERL");
+		Choice1.addItem("PHP");
+		Choice1.addItem("Java Script");
+		Choice1.addItem("Ruby");
+		add(Choice1);
+	} 
+}
+/*<applet code="AddItemItemMethodOfChoiceClass.class" width=1366 height=768>
+</applet>*/

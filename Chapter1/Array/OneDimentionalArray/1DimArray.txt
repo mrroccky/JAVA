@@ -1,0 +1,501 @@
+
+
+/*Write a program to demonstrate Declaration of One dimension Array.*/
+class DeclarationOfArray 
+{
+	public static void main(String args[]) 
+	{
+		int a[]=new int[5];
+		int i;
+		for(i=0;i<5;i++)
+		{
+		   a[i]=Integer.parseInt(args[i]);
+		}
+		System.out.println("Entered array elements are");
+		for(i=0;i<5;i++)
+		{
+           System.out.println(a[i]);
+		}
+	}
+}
+
+
+
+/*Write a program to demonstrate Initialization of One dimension Array.*/
+class InitializationOfOneDimensionArray  
+{
+	public static void main(String[] args) 
+	{
+		int a[]={1,2,3,4,5},i;
+		for(i=0;i<5;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+
+/*
+Note:-
+       1]We can not specified size directly in between script of Array in Java.But This can do in C and C++.
+	       i.e  1] int a[]={1,2,3,4,5}; //Legal in C,C++ and Java.
+		        2] int a[5]={1,2,3,4,5};//Legal in C,C++ but invalid in Java.
+				3] We can create boolean array but we  must store boolean literal.
+				4] We can perform type casting in initialization of array.
+				     i.e  int a[]={1,2,3,4,(int)5.5}.
+*/
+
+
+/*Write a program to demonstrate initialization Array for float data type.*/
+class InitializationOfOneDimensionArrayForFloatDataType  
+{
+	public static void main(String[] args) 
+	{
+		float a[]={1.1f,2.2f,3.3f,4.4f,5.5f};
+		int i=0;
+		for(i=0;i<5;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+
+/*Write a program to sort elements using inseration sort*/
+class InserationSort
+{
+	public static void main(String args[])
+	{
+		int a[]=new int[50];
+		int i,j,tem;
+		for(i=1;i<args.length;i++)
+		{
+			a[i]=Integer.parseInt(args[i]);
+		}
+		for(i=1;i<args.length;i++)
+		{
+			tem=a[i];
+			j=i-1;
+			System.out.println("hi");
+		    while((a[j]<=tem)&&(j>=0))
+			{
+				a[j]=a[j+1];
+				//j=j-1;
+			}
+			a[j+1]=tem;
+		}
+		System.out.println("Sorted order is=");
+		for(i=1;i<args.length;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+
+/*2Write a program to sort elements using inseration sort*/
+class InsertionSort
+{
+	public static void main(String args[])
+	{
+		int a[]=new int[50];
+		int i,j,tem;
+		for(i=1;i<args.length;i++)
+		{
+			a[i]=Integer.parseInt(args[i]);
+		}
+		for(i=1;i<args.length;i++)
+		{
+			tem=a[i];
+			j=i-1;
+		    while((tem<a[j])&&(j>=0))
+			{	
+				a[j+1]=a[j];
+				j=j-1;
+			}
+			a[j+1]=tem;
+		}
+		System.out.println("Sorted order is=");
+		for(i=1;i<args.length;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+
+/*Write a program to demonstrate Declaration of One dimension Array by using another way .*/
+class DeclarationOfArray1 
+{
+	public static void main(String args[]) 
+	{
+		int a[];
+		a=new int[5];
+		int i;
+		for(i=0;i<5;i++)
+		{
+		   a[i]=Integer.parseInt(args[i]);
+		}
+		System.out.println("Entered array elements are");
+		for(i=0;i<5;i++)
+		{
+           System.out.println(a[i]);
+		}
+	}
+}
+
+
+
+
+/*Write a program to search element using Binary search*/
+import Java.Basic.*;
+import java.io.BufferedReader;
+import java.util.Scanner;
+
+public class BinarySearch{
+	public static void main(String[] args) {
+		int a[]=new int[50];
+		int i,element,pos=-1,n,mid,first=0,last,postition;
+		BufferedReader b1;
+		try
+		{
+			
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("Entered the size of Array");
+            n=Integer.parseInt(scanner.nextLine());
+			last=n-1;
+			System.out.println("Entered the array element");
+			for(i=0;i<n;i++)
+		    {
+		         a[i]=Integer.parseInt(scanner.nextLine());
+		    }
+			System.out.println("Entered the searching Element");
+			element=Integer.parseInt(scanner.nextLine());
+			
+			for(i=0;i<n;i++)
+			{
+				mid=(first+last)/2;
+				if(a[mid]==element)
+				{
+					pos=1;
+					break;
+				}
+				else if(a[mid]<element)
+				{
+					last=mid-1;
+				}
+				else
+				{
+					first=mid+1;
+				}
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		if(pos==1)
+		{
+			System.out.println("Entered Element is Found");
+		}
+		else
+		{
+			System.out.println("Entered Element is not Found");
+		}
+	}
+}
+
+
+
+
+/*Write a program to sort elements using Bubble sort*/
+class BubbleSort
+{
+	public static void main(String args[])
+	{
+		int a[]=new int[50];
+		int i,j,tem;
+		for(i=0;i<args.length;i++)
+		{
+			a[i]=Integer.parseInt(args[i]);
+		}
+		for(i=0;i<args.length;i++)
+		{
+		   for(j=0;j<args.length-1;j++)
+			{
+			   if(a[j]>a[j+1])
+			   {
+                   tem=a[j];
+				   a[j]=a[j+1];
+				   a[j+1]=tem;
+			   }
+			}
+		}
+		System.out.println("Sorted order is=");
+		for(i=0;i<args.length;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+
+
+/*Write a program to find Greatest and Smallest number in a Array.*/
+class GreatestAndSmallestInArray 
+{
+	public static void main(String args[]) 
+	{
+		int a[]=new int[50];
+		int i,max,min,n;
+		for(i=0;i<args.length;i++)
+		{
+			a[i]=Integer.parseInt(args[i]);
+		}
+		max=a[0];
+		min=a[0];
+		for(i=1;i<args.length;i++)
+		{
+			if(a[i]>max)
+			{
+				max=a[i];
+			}
+			else if(a[i]<min)
+			{
+				min=a[i];
+			}
+		}
+		System.out.println("Grestest number in array="+max);
+		System.out.println("Smallest number in array="+min);
+	}
+}
+
+
+/*Write a program to find gretest number in a Array*/
+class GreatestInArray 
+{
+	public static void main(String args[]) 
+	{
+		int a[]=new int[50];
+		int i,max,n;
+		for(i=0;i<args.length;i++)
+		{
+			a[i]=Integer.parseInt(args[i]);
+		}
+		max=a[0];
+		for(i=1;i<args.length;i++)
+		{
+			if(a[i]>max)
+			{
+				max=a[i];
+			}
+		}
+		System.out.println("Greatest number in array="+max);
+	}
+}
+
+
+/* Write a program to demonstrate Initialization of One dimension Array and perform type casting in Initialization of Array.*/
+class InitializationOfOneDimensionAndPerformTypeCastingInThat  
+{
+	public static void main(String[] args) 
+	{
+		int a[]={(int)1.1,(int)2.2,(int)3.3,(int)4.5,(int)5.5},i=0;
+		for(i=0;i<5;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+/*
+Note:-
+       1]We can not specified size directly in between script of Array in Java.But This can do in C and C++.
+	       i.e  1] int a[]={1,2,3,4,5}; //Legal in C,C++ and Java.
+		        2] int a[5]={1,2,3,4,5};//Legal in C,C++ but invalid in Java.
+				3] We can create boolean array but we  must store boolean literal.
+				4] We can perform type casting in initialization of array.
+				     i.e  int a[]={(int)1.1,(int)2.2,(int)3.3,(int)4,(int)5.5};
+*/
+
+/*Write a program to search element using Linear search.*/ 
+import java.io.*;
+class LinearSearch
+{
+	public static void main(String[] args) 
+	{
+		int a[]=new int[50];
+		int i,element,pos=-1,n;
+		BufferedReader b1;
+		try
+		{
+			
+			b1=new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Enter the size of Array");
+            n=Integer.parseInt(b1.readLine());
+			System.out.println("Enter the array element");
+			for(i=0;i<n;i++)
+		    {
+		         a[i]=Integer.parseInt(b1.readLine());
+		    }
+			System.out.println("Entered the searching Element");
+			element=Integer.parseInt(b1.readLine());
+			for(i=0;i<n;i++)
+		    {
+		          if(a[i]==element)
+				  {
+					  pos=1;
+					  break;
+				  }
+			}
+			if(pos==1)
+			{
+				System.out.println("Enter element is found");
+			}
+			else
+			{
+				System.out.println("Enter element is not found");
+			}
+		}
+		catch(IOException e)
+		{
+			System.out.println(e);
+		}
+	}
+}
+
+
+/*Write a program to read element of Array using BuffredReader.*/
+import java.io.*;
+class  ReadArrayElementsUsingBufferedReaderClass
+{
+	public static void main(String args[]) 
+	{
+		int a[]=new int[50];
+		int i,n;
+		BufferedReader b1=new  BufferedReader(new InputStreamReader(System.in));
+		try
+		{
+			System.out.println("Enter the n");
+			n=Integer.parseInt(b1.readLine());
+			System.out.println("Enter the Array Elements:-");
+		    for(i=0;i<5;i++)
+		    {
+              
+			  a[i]=Integer.parseInt(b1.readLine());
+		    }
+			for(i=0;i<5;i++)
+		    {
+              System.out.println(a[i]);
+		    }
+		}
+		catch (IOException e)
+		{
+			System.out.println(e);
+		}
+	}
+}
+
+/*Write a program to read element of Array using BuffredReader.*/
+import java.util.*;
+class  ReadArrayElementsUsingScannerClass
+{
+	public static void main(String args[]) 
+	{
+		int a[]=new int[50];
+		int i,n;
+		Scanner sc=new Scanner(System.in));
+		System.out.println("Enter the n");
+		n=sc.nextInt();
+		System.out.println("Enter the array elements:-");
+		for(i=0;i<5;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		System.out.println("Elements in Array are:-");
+		for(i=0;i<5;i++)
+		{
+			System.out.println(a[i]);
+		}
+	}
+}
+
+
+/*Write a program to read element till you want to enter.*/
+class  ReadElementoFArray
+{
+	public static void main(String args[]) 
+	{
+		int a[]=new int[50];
+		int i;
+		for(i=0;i<args.length;i++)
+		{
+		   a[i]=Integer.parseInt(args[i]);
+		}
+		System.out.println("Entered array elements are");
+		for(i=0;i<args.length;i++)
+		{
+           System.out.println(a[i]);
+		}
+	}
+}
+
+
+/*Write a program to find Smallest number in Array.*/
+class SmallestInArray 
+{
+	public static void main(String[] args) 
+	{
+		int a[]=new int[50];
+		int i,min,n;
+		for(i=0;i<args.length;i++)
+		{
+			a[i]=Integer.parseInt(args[i]);
+		}
+		min=a[0];
+		for(i=1;i<args.length;i++)
+		{
+			if(a[i]<min)
+			{
+				min=a[i];
+			}
+		}
+		System.out.println("Smallest number in array="+min);
+	}
+}
+
+
+
+/*Write a program to read element and perform sum of Array Element.*/
+class  SumOfArrayElement
+{
+	public static void main(String args[]) 
+	{
+		int a[]=new int[50];
+		int i,sum=0;
+		for(i=0;i<args.length;i++)
+		{
+		   a[i]=Integer.parseInt(args[i]);
+		}
+		for(i=0;i<args.length;i++)
+		{
+           sum=sum+a[i];
+		}
+		System.out.println("Addition of Array Element is="+sum);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

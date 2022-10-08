@@ -1,0 +1,222 @@
+/*Write a program to demonstrate Initialization of Two Dimension Array.*/
+class MultiDimesionArray1
+{
+ 
+     public static void main(String[] args) 
+	 {
+          int a[][]={{1,2,3},{4,5,6}}; 
+		  int i,j;
+          for(i=0;i<2;i++)
+		  {
+		     for(j=0;j<3;j++)
+			 {
+				 System.out.println(a[i][j]);
+			 }
+		  }
+	 }
+}
+
+
+/*Write a program to demonstrate Initialization of Two Dimension Array.*/
+class TwoDimensionArray1
+{
+ 
+     public static void main(String[] args) 
+	 {
+          int a[][]={{1,2,3},{4,5,6}}; 
+		  int i,j;
+          for(i=0;i<2;i++)
+		  {
+		     for(j=0;j<3;j++)
+			 {
+				 System.out.println(a[i][j]);
+			 }
+		  }
+	 }
+}
+
+
+/*Write a program to read element for Two dimension Array*/
+import java.io.*;
+class TwoDimensionArray1
+{
+ 
+     public static void main(String[] args) 
+	 {
+		 int a[][]=new int[10][10];
+		 int row,column,i,j;
+		 BufferedReader b1;
+		 try
+		 {
+			    b1=new BufferedReader(new InputStreamReader(System.in));
+		        System.out.println("Entered the row column");
+				row=Integer.parseInt(b1.readLine());
+				column=Integer.parseInt(b1.readLine());
+				System.out.println("Enter the array element");
+				for(i=0;i<row;i++)
+				{
+				   for(j=0;j<column;j++)
+				   {
+					 a[i][j]=Integer.parseInt(b1.readLine());
+				   }
+				}
+				System.out.println("Entered the array elements are ");
+				for(i=0;i<row;i++)
+				{
+				  for(j=0;j<column;j++)
+				  {
+					System.out.println(a[i][j]);
+				  }
+			   }
+		 }
+		 catch (IOException e)
+		 {
+		 }
+         
+	 }
+}
+
+/*Write a program to read two matrix A and B and perform  Multiplication of two matrix*/
+import java.io.*;
+class MultiplicationOfTwoMatrix
+{
+ 
+     public static void main(String[] args) 
+	 {
+		 int a[][]=new int[10][10];
+		 int b[][]=new int[10][10];
+		 int mul[][]=new int[10][10];
+		 int row,column;
+		 int i,j;
+		 int row1,column1,k;
+		 BufferedReader b1;
+		 try
+		 {
+			    b1=new BufferedReader(new InputStreamReader(System.in));
+		        System.out.println("Entered the row and column for A matrix");
+				row=Integer.parseInt(b1.readLine());
+				column=Integer.parseInt(b1.readLine());
+				System.out.println("Enter the array elements for A matrix");
+				for(i=0;i<row;i++)
+				{
+				   for(j=0;j<column;j++)
+				   {
+					 a[i][j]=Integer.parseInt(b1.readLine());
+				   }
+				}
+				System.out.println("Entered the row and column for B matrix");
+				row1=Integer.parseInt(b1.readLine());
+				column1=Integer.parseInt(b1.readLine());
+				System.out.println("Enter the array element for B matrix");
+				for(i=0;i<row;i++)
+				{
+				   for(j=0;j<column;j++)
+				   {
+					 b[i][j]=Integer.parseInt(b1.readLine());
+				   }
+				}
+				for(i=0;i<row;i++)
+				{
+				  for(j=0;j<column1;j++)
+				  {
+					 for(k=0;k<column;k++)
+					 {
+						 mul[i][j]=a[i][k]*b[k][j];
+					 }
+				  }
+			   }
+			   for(i=0;i<row;i++)
+				{
+				   for(j=0;j<column1;j++)
+				   {
+					    System.out.println(mul[i][j]);
+				   }
+				}
+		 }
+		 catch (IOException e)
+		 {
+		 }
+         
+	 }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Write a program to read two matrix A and B and perform Addition of two matrix.*/
+import java.io.*;
+class AdditionOfTwoMatrix
+{
+	public static void main(String[] args) 
+	{
+		int a[][]=new int[3][4];
+		int b[][]=new int[10][10];
+		int c[][]=new int[10][10];
+		int rowA,columnA,rowB,columnB;
+		int i,j=0;
+		BufferedReader b1;
+		b1=new BufferedReader(new InputStreamReader(System.in));
+		try
+		{
+				System.out.println("Entered the row and column for A matrix");
+				rowA=Integer.parseInt(b1.readLine());
+				columnA=Integer.parseInt(b1.readLine());
+				System.out.println("Entered the row and column for B matrix");
+				rowB=Integer.parseInt(b1.readLine());
+				columnB=Integer.parseInt(b1.readLine());
+				if(rowA==rowB&&columnA==columnB)
+				{
+					System.out.println("Entered the elements for matrix A");
+
+					for(i=0;i<rowA;i++)
+					{
+						for(j=0;j<columnA;j++)
+						{
+							a[i][j]=Integer.parseInt(b1.readLine());
+						}
+					}
+					System.out.println("Entered the elements for matrix B");
+					for(i=0;i<rowB;i++)
+					{
+						for(j=0;j<columnB;j++)
+						{
+							b[i][j]=Integer.parseInt(b1.readLine());
+						}
+					}
+					for(i=0;i<rowA;i++)
+					{
+						for(j=0;j<columnA;j++)
+						{
+							c[i][j]=a[i][j]+b[i][j];
+						}
+					}
+					System.out.println("Addition of Matrix is=\n\n\n");
+					for(i=0;i<rowA;i++)
+					{
+						for(j=0;j<columnA;j++)
+						{
+							System.out.print(c[i][j]+"\t");
+						}
+						System.out.print("\n");
+					}
+				}
+		}
+		catch (IOException e)
+		{
+			System.out.println(e);
+		}
+
+		
+	}
+}

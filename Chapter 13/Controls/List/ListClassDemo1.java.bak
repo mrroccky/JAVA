@@ -1,0 +1,29 @@
+/*
+   Write a program demonstrate List class.
+           OR
+   Write a program to display list of some programming languages in list.
+*/
+import java.applet.*;
+import java.awt.*;
+public class ListClassDemo1 extends Applet
+{
+	List ListClass1;
+	public void init()
+	{
+		ListClass1=new List(2);
+		ListClass1.add("C");
+		ListClass1.add("C++");
+		ListClass1.add("Java");
+		ListClass1.add("Scala");
+		ListClass1.add(".Net");
+		ListClass1.add("Python");
+		ListClass1.add("PERL");
+		ListClass1.add("PHP");
+		ListClass1.add("Java Script");
+		ListClass1.add("Ruby");
+		add(ListClass1);
+	}
+	 
+}
+/*<applet code="ListClassDemo1.class" width=1366 height=768>
+</applet>*/

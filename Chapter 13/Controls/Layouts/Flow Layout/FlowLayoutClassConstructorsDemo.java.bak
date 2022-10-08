@@ -1,0 +1,25 @@
+/*Write a program to get default layout of Applet.*/ 
+import java.applet.*;
+import java.awt.*;
+public class FlowLayoutClassConstructorsDemo extends Applet
+{
+	TextField TextField1,TextField2,TextField3;
+	TextField TextField4,TextField5,TextField6;
+	public void init()
+	{
+		setLayout(new FlowLayout());
+		TextField1=new TextField(10);
+		TextField2=new TextField(10);
+		TextField3=new TextField(10);
+		add(TextField1);
+		add(TextField2);
+		add(TextField3);
+		setLayout(new FlowLayout(FlowLayout.RIGHT));
+		TextField4=new TextField(10);
+		TextField5=new TextField(10);
+		TextField6=new TextField(10);
+		
+	}
+}
+/*<applet code="FlowLayoutClassConstructorsDemo.class" width=1366 height=768>
+</applet>*/

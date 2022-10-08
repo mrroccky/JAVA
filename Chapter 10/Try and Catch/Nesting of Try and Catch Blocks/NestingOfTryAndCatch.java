@@ -1,0 +1,32 @@
+/* Write a program to demonstrate Nesting of try and catch block.*/
+class NestingOfTryAndCatch
+{
+	public static void main(String args[]) 
+	{
+		int a,b,c;
+		a=Integer.parseInt(args[0]);
+		b=Integer.parseInt(args[1]);
+		try
+		{
+			System.out.println("Now You are in main try block");
+			try
+			{
+				System.out.println("Now You are in nested try(Child) block for ArithmeticException");
+				c=a/b;
+			}
+			catch (ArithmeticException e)
+			{
+				System.out.println("Exception is due to no/0="+e);
+			}
+			catch(ArrayIndexOutOfBoundsException e)
+			{
+				System.out.println("Exception is transpare because mentions exception statement is not present");
+			}
+
+		}
+		catch(Exception e)
+		{
+			System.out.println("This block is executed for main(Parent) try block");
+		}
+	}
+}
